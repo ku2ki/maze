@@ -1,1 +1,33 @@
-//todo
+  This dummy code starts from 'simpleSample' project in Microsoft Directx 
+SDk(June 2010). It does nothing but create a 16*16 3d maze.
+
+The project is a test of github, so will be deleted later.
+
+# Environment
+  PS: though not necessary, the following environment have been proved no 
+  problem when build. You may have a new version of them. But the old version
+  of SDK or VS may fails.
+
+    Microsoft xp sp3
+    Visual Studio 2008(sp1)
+    Microsoft Directx SDK(June 2010)
+
+# How to build
+  All include and link settings have been set properly. Just press 'F7'.
+    
+  I list these settings just in case you are the poor guy who fails to build it.
+  :)
+  
+  $ Add the following line to 'Additional Include Directories'
+    DXUT\Core;DXUT\Optional;"$(DXSDK_DIR)Include"
+
+  $ Add the following line to 'Additional Library Directories'
+    "$(DXSDK_DIR)Lib\x86"
+
+  $ Add the following line to input libraries 
+    for releasez:
+    d3dx10.lib d3dx9.lib dxerr.lib dxguid.lib winmm.lib comctl32.lib 
+    for debug:
+    d3dx10d.lib d3dx9d.lib dxerr.lib dxguid.lib winmm.lib comctl32.lib
+
+# Use 'Q','E','A','D','W','S' to move Camera position, use mouse to look around.
